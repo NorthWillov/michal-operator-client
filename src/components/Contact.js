@@ -71,9 +71,9 @@ const Contact = () => {
           <h1 className="logo-name-pages">
             <Link to="/">MICHAŁ POTRATZ</Link>
           </h1>
-          <Typography variant="h2" style={useStyles.title}>
+          <h2 className="about_title" style={useStyles.title}>
             Skontaktuj się ze mną / Contact me
-          </Typography>
+          </h2>
           <Divider light sx={{ background: "white" }} />
           <Grid container spacing={3}>
             <Grid item xs={12} sm={6}>
@@ -106,7 +106,7 @@ const Contact = () => {
                   <Typography gutterBottom variant="h4" component="h2">
                     Media
                   </Typography>
-                  
+
                   {/* Add your social media icons here */}
                   <div className="icons icons-contact">
                     <a href={info.instaLink} target="_blank" rel="noreferrer">

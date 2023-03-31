@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "./Loader";
-import {
-  Container,
-  Typography,
-  Grid,
-  Divider,
-  CardContent,
-  Button,
-} from "@mui/material";
+import { Container, Divider } from "@mui/material";
 
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-
-const useStyles = {
-  title: {
-    marginBottom: 24,
-    textAlign: "left",
-  },
-};
 
 const initialState = {
   email: "michaelpotratz@gmail.com",
@@ -57,9 +43,7 @@ const About = () => {
           <h1 className="logo-name-pages">
             <Link to="/">MICHAŁ POTRATZ</Link>
           </h1>
-          <Typography variant="h1" style={useStyles.title}>
-            O mnie / About me
-          </Typography>
+          <h1 className="about_title">O mnie / About me</h1>
           <Divider light sx={{ background: "white" }} />
           <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
         </Container>
