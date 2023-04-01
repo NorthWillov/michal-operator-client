@@ -47,21 +47,24 @@ const About = () => {
     fetchData();
   }, []);
 
-  if (isLoading) {
-    return <Loader />;
-  }
   return (
     <>
       <div className="about">
         <Container>
-          <h1 className="logo-name-pages">
-            <Link to="/">MICHAŁ POTRATZ</Link>
-          </h1>
-          <Typography variant="h1" style={useStyles.title}>
-            O mnie / About me
-          </Typography>
-          <Divider light sx={{ background: "white" }} />
-          <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
+          {!isLoading ? (
+            <>
+              <h1 className="logo-name-pages">
+                <Link to="/">MICHAŁ POTRATZ</Link>
+              </h1>
+              <Typography variant="h1" style={useStyles.title}>
+                O mnie / About me
+              </Typography>
+              <Divider light sx={{ background: "white" }} />
+              <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
+            </>
+          ) : (
+            <Loader />
+          )}
         </Container>
       </div>
       <Footer info={info} />
