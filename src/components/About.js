@@ -37,29 +37,18 @@ const About = () => {
     <>
       <div className="about">
         <Container>
-<<<<<<< HEAD
           {!isLoading ? (
             <>
               <h1 className="logo-name-pages">
                 <Link to="/">MICHAŁ POTRATZ</Link>
               </h1>
-              <Typography variant="h1" style={useStyles.title}>
-                O mnie / About me
-              </Typography>
+              <h1 className="about_title">O mnie / About me</h1>
               <Divider light sx={{ background: "white" }} />
               <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
             </>
           ) : (
             <Loader />
           )}
-=======
-          <h1 className="logo-name-pages">
-            <Link to="/">MICHAŁ POTRATZ</Link>
-          </h1>
-          <h1 className="about_title">O mnie / About me</h1>
-          <Divider light sx={{ background: "white" }} />
-          <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
->>>>>>> afc5acb5937d39952d5b642764a7b604b9d028cc
         </Container>
       </div>
       <Footer info={info} />
