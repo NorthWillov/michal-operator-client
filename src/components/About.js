@@ -1,24 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "./Loader";
-import {
-  Container,
-  Typography,
-  Grid,
-  Divider,
-  CardContent,
-  Button,
-} from "@mui/material";
+import { Container, Divider } from "@mui/material";
 
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
-
-const useStyles = {
-  title: {
-    marginBottom: 24,
-    textAlign: "left",
-  },
-};
 
 const initialState = {
   email: "michaelpotratz@gmail.com",
@@ -51,6 +37,7 @@ const About = () => {
     <>
       <div className="about">
         <Container>
+<<<<<<< HEAD
           {!isLoading ? (
             <>
               <h1 className="logo-name-pages">
@@ -65,6 +52,14 @@ const About = () => {
           ) : (
             <Loader />
           )}
+=======
+          <h1 className="logo-name-pages">
+            <Link to="/">MICHAŁ POTRATZ</Link>
+          </h1>
+          <h1 className="about_title">O mnie / About me</h1>
+          <Divider light sx={{ background: "white" }} />
+          <p dangerouslySetInnerHTML={{ __html: info.about }}></p>
+>>>>>>> afc5acb5937d39952d5b642764a7b604b9d028cc
         </Container>
       </div>
       <Footer info={info} />

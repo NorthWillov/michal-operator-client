@@ -64,6 +64,7 @@ const Contact = () => {
     <>
       <div className="about">
         <Container>
+<<<<<<< HEAD
           {!isLoading ? (
             <>
               <h1 className="logo-name-pages">
@@ -134,6 +135,65 @@ const Contact = () => {
           ) : (
             <Loader />
           )}
+=======
+          <h1 className="logo-name-pages">
+            <Link to="/">MICHAŁ POTRATZ</Link>
+          </h1>
+          <h2 className="about_title" style={useStyles.title}>
+            Skontaktuj się ze mną / Contact me
+          </h2>
+          <Divider light sx={{ background: "white" }} />
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <Card style={useStyles.card}>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="h2">
+                    Email
+                  </Typography>
+                  <Typography variant="h5" component="p">
+                    <i className="fas fa-envelope" style={useStyles.icon}></i>
+                    {info.email}
+                  </Typography>
+                </CardContent>
+              </Card>
+              <Card style={useStyles.card}>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="h2">
+                    Phone
+                  </Typography>
+                  <Typography variant="h5" component="p">
+                    <i className="fas fa-phone" style={useStyles.icon}></i>
+                    {info.phone}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Card style={useStyles.card}>
+                <CardContent>
+                  <Typography gutterBottom variant="h4" component="h2">
+                    Media
+                  </Typography>
+
+                  {/* Add your social media icons here */}
+                  <div className="icons icons-contact">
+                    <a href={info.instaLink} target="_blank" rel="noreferrer">
+                      <i className="fa-brands fa-instagram instagram-icon"></i>
+                    </a>
+                    <a
+                      className="mr-2"
+                      href={info.youtubeLink}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i className="fa-brands fa-youtube youtube-icon"></i>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+>>>>>>> afc5acb5937d39952d5b642764a7b604b9d028cc
         </Container>
       </div>
       <Footer info={info} />
