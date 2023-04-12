@@ -140,7 +140,8 @@ h6 {
 }
 
 .youtube-icon,
-.instagram-icon {
+.instagram-icon,
+.linkedin-icon {
   font-size: 30px;
   margin-right: 5px;
 }
@@ -149,6 +150,9 @@ h6 {
 }
 .youtube-icon {
   color: #ff0000;
+}
+.linkedin-icon {
+  color: #0072b1;
 }
 .copyright {
   margin-top: 10px;

@@ -28,6 +28,14 @@ const PictureSection = ({ info }) => {
           >
             <i className="fa-brands fa-youtube youtube-icon"></i>
           </a>
+          <a
+            className="mr-2"
+            href={info.linkedInLink}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <i className="fa-brands fa-linkedin linkedin-icon"></i>
+          </a>
         </div>
       </div>
     </section>

@@ -11,6 +11,7 @@ function EditInfoModal({ info, onClose, isEditInfoOpen }) {
   const [phone, setPhone] = useState(info.phone);
   const [instaLink, setInstaLink] = useState(info.instaLink);
   const [youtubeLink, setYoutubeLink] = useState(info.youtubeLink);
+  const [linkedInLink, setLinkedInLink] = useState(info.linkedInLink);
   const token = cookies.get("TOKEN");
 
   const handleAboutChange = (event) => {
@@ -33,6 +34,10 @@ function EditInfoModal({ info, onClose, isEditInfoOpen }) {
     setYoutubeLink(event.target.value);
   };
 
+  const handleLinkedInLinkChange = (event) => {
+    setLinkedInLink(event.target.value);
+  };
+
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -44,6 +49,7 @@ function EditInfoModal({ info, onClose, isEditInfoOpen }) {
           phone,
           instaLink,
           youtubeLink,
+          linkedInLink,
         },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -96,6 +102,11 @@ function EditInfoModal({ info, onClose, isEditInfoOpen }) {
           label="YouTube Link"
           value={youtubeLink}
           onChange={handleYoutubeLinkChange}
+        />
+        <TextField
+          label="LinkedIn Link"
+          value={linkedInLink}
+          onChange={handleLinkedInLinkChange}
         />
         <Button
           type="submit"

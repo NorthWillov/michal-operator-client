@@ -15,6 +15,14 @@ const Footer = ({ info }) => {
         >
           <i className="fa-brands fa-youtube youtube-icon"></i>
         </a>
+        <a
+          className="mr-2"
+          href={info.linkedInLink}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-linkedin linkedin-icon"></i>
+        </a>
       </div>
       <span className="copyright">© 2023 Michał Potratz</span>
     </footer>
