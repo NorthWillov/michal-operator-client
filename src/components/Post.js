@@ -18,7 +18,7 @@ const Post = ({ _id, title, subtitle, mediaType, mediaUrl, idx }) => {
           <div className="post">
             <div className="post-text text-right">
               <h2>{title}</h2>
-              <p>{subtitle}</p>
+              <p dangerouslySetInnerHTML={{ __html: subtitle }}></p>
             </div>
             <div className="post-media">
               {mediaType === "video" ? (
@@ -55,7 +55,7 @@ const Post = ({ _id, title, subtitle, mediaType, mediaUrl, idx }) => {
             </div>
             <div className="post-text text-left">
               <h2>{title}</h2>
-              <p>{subtitle}</p>
+              <p dangerouslySetInnerHTML={{ __html: subtitle }}></p>
             </div>
           </div>
         )
@@ -82,7 +82,7 @@ const Post = ({ _id, title, subtitle, mediaType, mediaUrl, idx }) => {
           </div>
           <div className="post-text-mobile">
             <h2>{title}</h2>
-            <p>{subtitle}</p>
+            <p dangerouslySetInnerHTML={{ __html: subtitle }}></p>
           </div>
         </div>
       )}
